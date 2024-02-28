@@ -1,0 +1,304 @@
+/*DASHBOARD*/
+.grid-container{
+    display:grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2fr;
+    grid-template-areas: 
+    'sidebar header header header'
+    'sidebar main main main';
+    height: 100vh;
+    background-color:  #FAFBFC;
+  
+  
+  }
+  /* Header styles */
+  .header {
+   
+    grid-area: header;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px; /* Added padding */
+   box-shadow: 0 6px 7px -3px rgb(0,0,0,-0.35);
+    background-color: white;
+  }
+  
+  .header-left{
+    color: rgb(27, 27, 72) ;
+    font-size: 30;
+    font-family: poppins,  sans-serif;
+  }
+  .header-list-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    margin-right: 20px; /* Add right margin between list items */
+  }
+  
+  .header-list-item > a {
+    text-decoration: none; /* Remove text decoration from anchor tags */
+    color: #252529;
+    font-family: poppins,  sans-serif;
+    text-align: center;
+  }
+  .header-right {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+  }
+  .icon1 {
+    width: 10px; /* Set width of the icon */
+    height: 10px; /* Set height of the icon */
+    margin-right: 5px; /* Add right margin to the icon */
+    text-decoration: none;
+  }
+  .icon2 {
+    width: 26px; /* Set width of the icon */
+    height: 26px; /* Set height of the icon */
+    margin-right: 5px; /* Add right margin to the icon */
+    
+  }
+  
+  .header-list-item select,
+  .header-list-item img {
+    vertical-align: middle; /* Align items vertically within the list item */
+  }
+  .icon{
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 3px;
+  }
+  
+  .icon_header {
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+  }
+  .icon,.icon_header{
+    margin-right: 10px;
+    
+  }
+  
+  
+  
+  /* Sidebar styles */
+  
+    
+  #sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    width: 80%;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    background-color: white; /* Background color for the sidebar */
+   
+  }
+  
+  .sidebar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    margin: 1px;
+    font-size: 10px;
+    font-family: poppins,  sans-serif;
+    font-style: bold;
+  }
+  .sidebar-title > span{
+    padding-top: 5px;
+  }
+  
+  
+  .sidebar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-brand img {
+    margin-right: 5px; /* Reduce gap between image and text */
+  }
+  
+  .sidebar-brand span {
+    font-family: Abel;
+    font-size: 14px; /* Set font size */
+    line-height: 1; /* Ensure proper alignment */
+    margin-left: 0px; /* Reduce gap between image and text */
+  }
+  
+ 
+  .sidebar-list{
+    padding: 0;
+    list-style-type: none;
+  }
+  .sidebar-list-item {
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+    margin: 0px 15px;
+  }
+  
+  .sidebar-list-item:hover {
+    background-color: #DDACF5;
+    border-radius: 5px;
+    margin: 3px 20px;
+  }
+  
+  .sidebar-list-item > a {
+    text-decoration: none; /* Remove text decoration from anchor tags */
+    color: #252529;
+  }
+  .sidebar-list-item:hover > a {
+    color: white; /* Change text color to white on hover */
+  }
+  
+  
+  
+  
+  .sidebar-responsive{
+    display: inline !important;
+    position: absolute;
+  
+  z-index: 12 !important;
+  }
+  
+  
+  
+  /* Cards styles */
+  /* CSS for Cards */
+  
+  
+  
+  .main-container {
+  grid-area: main;
+  padding-top: 30px 60px;
+  background-color: white;
+  background-origin: padding-box;
+  border-radius: 5px;
+  margin: 30px 40px;
+  
+  }
+  
+  
+  
+  .main-cards {
+    display: grid;
+   grid-auto-flow: column;
+    gap : 5px;
+   margin: 50px 30px;
+  }
+  
+  .card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1px 2px; /* Adjust padding */
+    border-radius: 5px;
+    width: 150px; /* Adjust width */
+    height: 150px; /* Adjust height */
+}
+  .card1:first-child{
+    background-color:#ffd0c4 ;
+  }
+  .card1:nth-child(2){
+    background-color:#fff5b7 ;
+  } 
+  .card1:nth-child(3){
+    background-color:#f1d1fa ;
+  }
+  .card1:nth-child(4){
+    background-color: #FFE2E5;
+  }
+  .card1:nth-child(5){
+    background-color: #f7d2d6;
+  }
+  
+  
+  .card1 h3 {
+    margin-top: 10px;
+    text-align: left;
+    color :#425166;
+    font-family: poppins,  sans-serif;
+    
+  }
+  
+  .card-inner1{
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  }
+  
+  .card-inner > .card_icon {
+    font-size: 15px;
+    padding-top: 1px;
+   text-align: center;
+  }
+  
+  .generate-timetable-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px; /* Adjust the max-width as needed */
+    margin: 30 auto; /* Center align horizontally */
+    padding: 30px ; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 30px 300px;
+    white-space: nowrap; /* Ensure text stays on a single line */
+   
+  }
+  
+  .generate-timetable-btn:hover {
+    background-color: #DDACF5;
+    color: white;
+  }
+  
+  
+  /*END DASHBOARD*/
+  /* InstituteForm.css */
+/* InstituteForm.css */
+
+.Institute-Form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  
+ 
+}
+
+.Institute-Form h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-bottom-color 0.25s ease;
+}
+
+.input-field:focus {
+  border-bottom-color: blue;
+}
+
+.submit-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+ max-width: 200px;
+}
+.submit-button:hover{
+  background-color: grey;
+}

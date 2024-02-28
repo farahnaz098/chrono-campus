@@ -1,3 +1,531 @@
+/* Styling for Home.js */
+
+body, html {
+ padding: auto;
+height: 100%;
+
+}
+
+body {
+}
+
+.home-container {
+  
+ 
+  background-image: url('./images/Homepage.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: #61dafb;
+  background-blend-mode: lighten;
+ padding: 10px;
+ /* Example text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Ensure relative positioning for absolute elements */
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.SignUp {
+  position: absolute;
+  top: 5px;
+  border-radius: 15px;
+  right: 5px;
+  display: inline-block;
+  padding: 10px;
+  width: 70px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  background-color: hwb(195 81% 6%);
+  border-color: rgb(154, 198, 235);
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 1em;
+ 
+}
+.nav-links a{
+  text-decoration: none;
+  color: #0c0c0c;
+  font-size: small;
+  font-weight: 50;
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+ text-align: justify;
+}
+
+.nav-links li {
+ margin-right: 55px;
+  position: relative; 
+}
+.nav-links  li::after{
+  content: '';
+  width: calc(100% - 2em); 
+  height: 2px;
+background: transparent;
+position: absolute;
+bottom: 0;
+left: 50%; /* Position the pseudo-element in the middle */
+transform: translateX(-50%); 
+transition: background 0.3s ease; 
+}
+.nav-links  li:hover::after{
+ background: #9acde5;
+}
+ .logo{
+  text-align: right;
+  margin-left: 50px;
+  
+ }
+ /* search box */
+ .search-box {
+  margin-top: 20px;
+  border: 1px solid #b7e7f6;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(255, 255, 255, 0));
+  height: 35px;
+  margin-top: 30px;
+}
+
+.search-box input {
+  width: 100%;
+  
+  padding: 7px 15px ;
+  border-radius: 30px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #b7e7f6;
+}
+
+::placeholder {
+  color: #141313;
+}
+
+.search-box img {
+  width: 20px;
+  margin: 5px 10px;
+}
+ /* LANGUAGE SELECTOR */
+ 
+ .language-selector {
+  position: relative;
+}
+
+.language-selector select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 5px;
+  padding-left: 40px; /* Adjust padding to accommodate flag */
+  border-radius: 5px;
+  color: #333; /* Adjust text color as needed */
+}
+
+.language-selector select::-ms-expand {
+  display: none;
+}
+
+.flag-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px; /* Adjust distance from the left as needed */
+  width: 30px; /* Adjust flag size as needed */
+  height: 30px; /* Ensure the height matches the width for a circular shape */
+  border-radius: 50%; /* Make the flag circular */
+  overflow: hidden; /* Hide parts of the flag outside the circle */
+}
+
+.flag-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Ensure the flag image is also circular */
+}
+
+
+
+ .chrono{
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 70px;
+  margin-right: 70px;
+  color: rgb(65, 61, 61);
+ }
+.main-content{
+  display: flex;
+}
+.text {
+  text-align: left;
+  padding: 50px;
+  margin: 40px;
+ position: relative;
+ color: #212123;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+letter-spacing: 1px;
+/* Adding a semi-transparent black background for text readability */
+}
+.images {
+  display: flex;
+  align-items: flex-end;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  }
+
+
+.img1 {
+  /* Maintain aspect ratio */
+  height: 205px; /* Set height equal to sideimg */
+  width: auto; /* Auto adjust width to maintain aspect ratio */
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.img2 {
+  /* Maintain aspect ratio */
+  height: 205px; /* Set height equal to sideimg */
+  width: auto; /* Auto adjust width to maintain aspect ratio */
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  border-radius: 20px;
+  margin-bottom: 175px;
+}
+
+
+.sideimg {
+  margin-top: 50px;
+  width: 280px; /* Adjust width as needed */
+  height: 484px; /* Adjust height as needed */
+  margin-left: 20px; /* Adjust margin as needed */
+  align-self: flex-end;
+  border-radius: 35px;
+  margin-bottom: 150px;
+
+}
+
+
+/* Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Sign Up*/
+.form-group{
+  display: flex;
+  padding: 5px;
+   
+}
+.signup-container h2{
+  text-align: center;
+}
+.external-login{
+      display: flex;
+      flex-wrap: nowrap;
+}
+.google {
+  border: none;
+  border-radius: 5px;
+  background-color: hwb(7 11% 27% / 0.682); /* Google Red */
+  color: white;
+  padding: 5px 25px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.facebook {
+  border: none;
+  border-radius: 5px;
+  background-color: #3B5998; /* Facebook Blue */
+  color: white;
+  padding: 5px 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.signup-container button[type="submit"] {
+  display: block;
+  margin: 0 auto; /* Center the button */
+  border-radius: 20px; /* Add border radius */
+  background-color:  hwb(196 66% 8%);
+  border-color: rgb(154, 198, 235);
+  padding: 10px 20px; /* Add padding */
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.signup-container button[type="submit"]:hover {
+  background-color: hwb(195 81% 20%); /* Change background color on hover */
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+/* Add border only at the bottom */
+.form-group input {
+  border: none;
+  border-bottom: 1px solid #ccc; /* Add bottom border */
+  padding: 5px 0; /* Adjust padding */
+  margin-bottom: 10px; /* Adjust spacing */
+}
+/*Sign In */
+.form1-group{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+   
+}
+.welcome-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-back h2 {
+  margin-right: 10px; /* Adjust spacing between text and image */
+}
+
+.welcome-back img {
+  max-width: 30px; /* Adjust the maximum width of the image */
+  height: 30px; /* Maintain aspect ratio */
+}
+
+
+
+
+.signin-container button[type="submit-login"] {
+  display: block;
+  margin: 0 auto; /* Center the button */
+  border-radius: 20px; /* Add border radius */
+  background-color:  hwb(196 66% 8%);
+  border-color: rgb(154, 198, 235);
+  padding: 10px 20px; /* Add padding */
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.signin-container button[type="submit-login"]:hover {
+  background-color: hwb(195 81% 20%); /* Change background color on hover */
+}
+.form1-group input {
+  border: none;
+  border-bottom: 1px solid #ccc; /* Add bottom border */
+  padding: 5px 0; /* Adjust padding */
+  margin-bottom: 10px; /* Adjust spacing */
+}
+ /* Services Section */
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  opacity: 0;
+  transition: opacity 0.2s ease; /* Add transition for opacity */
+  
+}
+.services.show {
+  opacity: 1;
+}
+
+
+.card {
+  text-align: center;
+  width: 250px;
+  margin: 20px;
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  background-color: #ffffff; /* Set background color */
+  padding: 30px; /* Add padding for content */
+  transition: box-shadow 0.2s ease;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:hover {
+  box-shadow: none; /* Remove shadow effect on hover */
+}
+/* Contact Form */
+.contact-form {
+  margin-top: 50px;
+  text-align: center;
+  background-color: hwb(198 88% 4%);
+  padding: 50px;
+  border-radius: 10px;
+  height: 350px;
+  width: 500px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+/* footer */
+.footer {
+  background-color: hsl(0, 2%, 63%);
+  padding: 20px  0 ;
+  margin-top: 20px;
+  width: 101%;
+  border-radius: 0%;
+  box-shadow: 15px 15px 15px 30px rgba(20, 19, 19, 0.1); 
+  
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.footer-section {
+  width: 25%;
+  padding: 0 20px;
+}
+
+.footer-section h2 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer-section p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.footer-section form {
+  margin-top: 20px;
+}
+
+.footer-section input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.footer-section button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+  background-color: #555;
+}
+/* Institute Styling */
+
+
 .App {
   text-align: center;
 }
