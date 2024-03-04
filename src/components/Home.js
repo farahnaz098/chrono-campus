@@ -174,6 +174,7 @@ const Home = () => {
     </div>
     <div className="footer-section">
       <h2>Newsletter Signup</h2>
+      
       <p>Subscribe and Stay Updated!</p>
       <form>
         <input type="email" placeholder="Your email address" />

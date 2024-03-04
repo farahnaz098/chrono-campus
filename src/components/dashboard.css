@@ -1,29 +1,29 @@
 /*DASHBOARD*/
-.grid-container{
-    display:grid;
-    grid-template-columns: 260px 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2fr;
-    grid-template-areas: 
-    'sidebar header header header'
-    'sidebar main main main';
-    height: 100vh;
-    background-color:  #FAFBFC;
-  
-  
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr;
+  grid-template-rows: 60px auto;
+  grid-template-areas: 
+  'sidebar header header header'
+  'sidebar main main main';
+  height: 100vh;
+  background-color: #FAFBFC;
+  position: relative;
+}
   /* Header styles */
   .header {
-   
     grid-area: header;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px 0 30px; /* Added padding */
-   box-shadow: 0 6px 7px -3px rgb(0,0,0,-0.35);
+    padding: 0 30px; /* Adjusted padding */
+    box-shadow: 0 6px 7px -3px rgb(0, 0, 0, -0.35);
     background-color: white;
-  }
-  
+    position: relative; /* Add position relative */
+    z-index: 1; /* Ensure header stays above sidebar */
+    margin-left: 190px;
+}
   .header-left{
     color: rgb(27, 27, 72) ;
     font-size: 30;
@@ -86,14 +86,15 @@
     
   #sidebar {
     grid-area: sidebar;
-    height: 100%;
-    width: 80%;
-    overflow-y: auto;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    background-color: white; /* Background color for the sidebar */
-   
-  }
+   height: 100%;
+    width: 15%;
+     transition: all 0.2s;
+    background-color: white;
+    position: fixed; /* Change position to fixed */
+    top: 0px; /* Adjusted top position */
+    left: 0;
+    z-index: 1; /* Ensure sidebar stays above main-container */
+}
   
   .sidebar-title {
     display: flex;
@@ -170,15 +171,14 @@
   
   
   .main-container {
-  grid-area: main;
-  padding-top: 30px 60px;
-  background-color: white;
-  background-origin: padding-box;
-  border-radius: 5px;
-  margin: 30px 40px;
-  
-  }
-  
+    grid-area: main;
+    padding: 30px;
+    background-color: white;
+    background-origin: padding-box;
+    border-radius: 5px;
+    margin: 40px 40px 40px 230px; /* Adjusted margin */
+    height: calc(100vh - 200px); /* Adjusted height to leave space for the header */  
+}
   
   
   .main-cards {
@@ -301,4 +301,62 @@
 }
 .submit-button:hover{
   background-color: grey;
+}
+/* institute dashboard */
+.main-container {
+  padding: 20px;
+}
+
+.institute-button {
+  text-align: right;
+}
+
+.institute-data {
+  margin-top: 20px;
+}
+
+.institute-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.institute-table th, .institute-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.institute-table th {
+  background-color: #f2f2f2;
+}
+
+.institute-table td ul {
+  margin: 0;
+  padding: 0;
+}
+
+.institute-table td ul li {
+  list-style: none;
+}
+/* CSS */
+.form-container {
+  height: 500px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Hide the scrollbar track */
+.form-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Customize the scrollbar thumb */
+.form-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Hide scrollbar for Microsoft Edge */
+@supports (-ms-ime-align:auto) {
+  .form-container {
+    scrollbar-width: none; /* Hide scrollbar */
+  }
 }
